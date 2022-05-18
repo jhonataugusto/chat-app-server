@@ -12,8 +12,8 @@ const io = socket(server, {
 }); //integração do socket com o server
 
 const SERVER_HOST = "adriano-chat.netlify.app";
-//const SERVER_PORT = 8080;
-const SERVER_PORT = process.env.PORT || 3000;
+const SERVER_PORT = 8080;
+//const SERVER_PORT = process.env.PORT || 3000;
 
 io.on("connection", (socket) => {
   console.log("[IO] Conexão => Há uma nova conexão");
@@ -29,7 +29,7 @@ io.on("connection", (socket) => {
 });
 
 //o servidor vai ficar ouvindo a porta "SERVER_HOST:SERVER_PORT"
-server.listen(SERVER_PORT, SERVER_HOST, () => {
+server.listen(SERVER_PORT, () => {
   console.log(
     `[HTTP] Listen => Servidor está rodando em http://${SERVER_HOST}:${SERVER_PORT}`
   );
