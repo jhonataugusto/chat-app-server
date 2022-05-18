@@ -11,7 +11,7 @@ const io = socket(server, {
   cors: { origin: "*", methods: ["GET", "POST"] },
 }); //integração do socket com o server
 
-const SERVER_HOST = "6285376e84af211a5cd5c04d--famous-begonia-165c81.netlify.app";
+const SERVER_HOST = "famous-begonia-165c81.netlify.app";
 //const SERVER_PORT = 8080;
 const SERVER_PORT = process.env.PORT || 3000;
 
