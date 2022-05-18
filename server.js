@@ -8,7 +8,7 @@ const app = new Koa();
 const server = http.createServer(app.callback());
 
 const io = socket(server, {
-  cors: { origin: "famous-begonia-165c81.netlify.app:3000", methods: ["GET", "POST"] },
+  cors: { origin: "famous-begonia-165c81.netlify.app", methods: ["GET", "POST"] },
 }); //integração do socket com o server
 
 const SERVER_HOST = "famous-begonia-165c81.netlify.app";
