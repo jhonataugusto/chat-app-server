@@ -8,12 +8,12 @@ const app = new Koa();
 const server = http.createServer(app.callback());
 
 const io = socket(server, {
-  cors: { origin: "http://adriano-chat.netlify.app:3000", methods: ["GET", "POST"] },
+  cors: { origin: "https://f88f-45-188-91-9.sa.ngrok.io:8080", methods: ["GET", "POST"] },
 }); //integração do socket com o server
 
-const SERVER_HOST = "adriano-chat.netlify.app";
-//const SERVER_PORT = 8080;
-const SERVER_PORT = process.env.PORT || 3000;
+const SERVER_HOST = "f88f-45-188-91-9.sa.ngrok.io";
+const SERVER_PORT = 8080;
+//const SERVER_PORT = process.env.PORT || 3000;
 
 io.on("connection", (socket) => {
   console.log("[IO] Conexão => Há uma nova conexão");
