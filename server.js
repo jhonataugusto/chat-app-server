@@ -11,8 +11,9 @@ const io = socket(server, {
   cors: { origin: "*", methods: ["GET", "POST"] },
 }); //integração do socket com o server
 
-const SERVER_HOST = "localhost";
-const SERVER_PORT = 8080;
+const SERVER_HOST = "chat-app-server-eight.vercel.app";
+//const SERVER_PORT = 8080;
+const SERVER_PORT = process.env.PORT || 3000;
 
 io.on("connection", (socket) => {
   console.log("[IO] Conexão => Há uma nova conexão");
