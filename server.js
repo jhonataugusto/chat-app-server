@@ -8,10 +8,10 @@ const app = new Koa();
 const server = http.createServer(app.callback());
 
 const io = socket(server, {
-  cors: { origin: "famous-begonia-165c81.netlify.app", methods: ["GET", "POST"] },
+  cors: { origin: "adriano-chat.netlify.app", methods: ["GET", "POST"] },
 }); //integração do socket com o server
 
-const SERVER_HOST = "famous-begonia-165c81.netlify.app";
+const SERVER_HOST = "adriano-chat.netlify.app";
 //const SERVER_PORT = 8080;
 const SERVER_PORT = process.env.PORT || 3000;
 
