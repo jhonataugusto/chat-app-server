@@ -8,7 +8,7 @@ const app = new Koa();
 const server = http.createServer(app.callback());
 
 const io = socket(server, {
-  cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
+  cors: { origin: "http://adriano-chat.netlify.app:3000", methods: ["GET", "POST"] },
 }); //integração do socket com o server
 
 const SERVER_HOST = "adriano-chat.netlify.app";
